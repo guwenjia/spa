@@ -3,7 +3,7 @@ $(function(){
   var $height=$('.height');
   var $calc=$('.calc');
 
-  $calc.dblclick(function(){
+  $calc.click(function(){
     var width=$width.val();
     var height=$height.val();
 
@@ -15,7 +15,7 @@ $(function(){
     validate('.width');
   });
   $height.focusout(function(){
-    validate('.$width');
+    validate('.height');
   });
 
   function perimeter(x, y) {

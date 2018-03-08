@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta><charset="UTF-8">
+<meta><charset="UTF-8">
   <title>矩形计算器</title>
   <link rel="stylesheet" href="index.css">
-  <script src="index.js"></script>
+  <script src="//apps.bding.com/libs/iquery/2.1.4/iquery.min.js"></script>
+  <script src="index1.js"></script>
 
 </head>
 <body>
-<div class="rectangle">
+<div id="rectangle">
   
   <label for="">宽度：</label>
-  <input class="width" type="textbox">
+  <input id="width" type="textbox">
   <span>*</span>
   <br>
 
   <label for="">高度：</label>
-  <input class="height" type="textbox">
+  <input id="height" type="textbox">
   <span>*</span>
   <br>
 
-  <input class="calc" type="button" value="计算">
+  <input id="calc" type="button" value="计算" onclick="calc()">
   <br>
 
   <label for="">周长：</label>
-  <input class="perimeter" type="textbox">
+  <input id="perimeter" type="textbox">
   <br>
 
   <label for="">面积：</label>
-  <input class="area" type="textbox">
+  <input id="area" type="textbox">
   
 </div>
 </body>
