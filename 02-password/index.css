@@ -13,11 +13,7 @@ body{
   font-size:20px;
 }
 img{
-  background:url(https://github.com/guwenjia/spa/blob/master/02-password/eye.png?raw=true) no-repeat 0 0;
-  background-size:25px 25px;
-  background-position:right;
+  background:url(https://raw.githubusercontent.com/guwenjia/spa/master/02-password/eye.png) no-repeat 0 0;
   width:20px;
   height:20px; 
-  font-size:20px;
-  
 }
