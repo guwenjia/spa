@@ -1,62 +1,36 @@
 $(function(){
-  var $width=$('.width');
-  var $height=$('.height');
-  var $calc=$('.calc');
+  
+    $("#width").blur(function(){
+       if($("#with").val()===""){
+         $("#one").html("<br/>输入不能为空！");
+         $("#one").css("color","red");
+         $("#one").css("font-size","12px");
 
-  $calc.click(function(){
-    var width=$width.val();
-    var height=$height.val();
+       }else{
+         $("#one").html("");
+       }
+       
+    });
+$("#height").blur(function(){
+       if($("#height").val()==""){
 
-    $('.perimeter').val(perimeter(width,height));
-    $('.area').val(area(width,height));
+         $("#two").html("<br/>输入不能为空！");
+         $("#two").css("color","red");  
+          $("#two").css("font-size","12px");
+
+       }else{
+         $("#two").html("");
+       } 
+    });
+
+  $("#perimeter").attr("disabled","false").css("background","#E0E0E0");
+  $("#area").attr("disabled","false").css("background","#E0E0E0")
+  $("#btn").click(function(){
+     var w = $("#width").val();
+     var h = $("#height").val();
+     $("#perimeter").val(w*2+h*2);
+     $("#area").val(w*h);
+
+
   });
-
-  $width.focusout(function(){
-    validate('.width');
-  });
-  $height.focusout(function(){
-    validate('.height');
-  });
-
-  function perimeter(x, y) {
-    var lenX = (x.split('.').length === 2) ? x.split('.')[1].length : 0,
-        lenY = (y.split('.').length === 2) ? y.split('.')[1].length : 0;
-
-    var max = Math.max(lenX, lenY);
-    return (x * (10 ** max) + y * (10 ** max)) * 2 / (10 ** max);
-  }
-
-  function area(x, y) {
-    var lenX = (x.split('.').length === 2) ? x.split('.')[1].length : 0,
-        lenY = (y.split('.').length === 2) ? y.split('.')[1].length : 0;
-
-    var max = Math.max(lenX, lenY);
-    return (x * (10 ** max)) * (y * (10 ** max)) / (10 ** (2 * max));
-  }
-  function validate(field) {
-    var $data = $(field),
-      $message = $(field + '-validate'),
-      label = $(field).attr('data-label');
-
-    if($data.val() === '') {
-      $message.html(label + '不能为空！');
-      $data.select();
-      return;
-    }
-
-    if(!/^-?(0|[1-9]\d*)(\.\d*)?([eE][+-]?\d+)?$/.test($data.val())) {
-      $message.html(label + '必须是数值');
-      $data.select();
-      return;
-    }
-
-    if(window.Number($data.val()) < 0) {
-      $message.html(label + '必须大于零');
-      $data.select();
-      return;
-    }
-
-    $message.html('');
-  }
-
 });
