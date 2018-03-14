@@ -1,7 +1,7 @@
 $(function(){
   
     $("#width").blur(function(){
-       if($("#with").val()===""){
+       if($("#width").val()===""){
          $("#one").html("<br/>输入不能为空！");
          $("#one").css("color","red");
          $("#one").css("font-size","12px");
@@ -25,7 +25,7 @@ $("#height").blur(function(){
 
   $("#perimeter").attr("disabled","false").css("background","#E0E0E0");
   $("#area").attr("disabled","false").css("background","#E0E0E0")
-  $("#btn").click(function(){
+  $("#calc").click(function(){
      var w = $("#width").val();
      var h = $("#height").val();
      $("#perimeter").val(w*2+h*2);
