@@ -16,5 +16,9 @@ function reset(){
 }
 
 function end(){
-   clearInterval(run);
+   var pg= document.getElementById('pg');
+  	var stop = (pg.value-100)>0?run-100:0;
+    for(var i = stop;i<=run;i++){
+  		clearInterval(i); 
+	}
 }
