@@ -35,20 +35,20 @@ $(function(){
              $("#two").html("<br/>输入不能为空！");
              $("#two").css("color","red");  
               $("#two").css("font-size","12px");
-
+              $("#calc").attr("disabled",true); 
            }
             else if ($("#height").val()< 0) {
              $("#two").html("<br/>长度必须大于零");
              $("#two").css("color","red");
              $("#two").css("font-size","12px");
-             $("#calc").attr("disabled",true); 
+            // $("#calc").attr("disabled",true); 
           }
           else if(!/^-?(0|[1-9]\d*)(\.\d*)?([eE][+-?\d+])?$/.test($("#height").val())){
            // console.log("111");
            $("#two").html("<br/>长度必须是数值");
            $("#two").css("color","red");
            $("#two").css("font-size","12px");
-           $("#calc").attr("disabled",true);
+           //$("#calc").attr("disabled",true);
           }
           else{
             $("#two").html("");
