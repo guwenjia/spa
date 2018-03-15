@@ -24,16 +24,8 @@ $(function(){
            $("#one").css("font-size","12px");
            
           }
-          else{
-            $("#one").html("");
-             var w = $("#width").val();
-             var h = $("#height").val();
-             $("#perimeter").val(w*2+h*2);
-            $("#area").val(w*h);
-          }
-       
       
-           if($("#height").val()==""){
+          else if($("#height").val()==""){
 
              $("#two").html("<br/>输入不能为空！");
              $("#two").css("color","red");  
@@ -54,6 +46,7 @@ $(function(){
            
           }
           else{
+            $("#one").html("");
             $("#two").html("");
             var w = $("#width").val();
             var h = $("#height").val();
