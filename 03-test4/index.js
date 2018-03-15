@@ -3,22 +3,22 @@ $(function(){
         event.preventDefault();
   });
   $('#width').blur(function(){
-    $('#imgone').html('<img src="https://raw.githubusercontent.com/shichenxiao/spa/master/06-check/04-h5check/error.png">');
+    $('#imgone').html('<img src="https://raw.githubusercontent.com/guwenjia/spa/master/03-test4/error.png">');
     var reg = /^\d+(\.{0,1}\d+){0,1}$/;
     if(!reg.test($('#width').val())){
-    $('#imgone').html('<img src="https://raw.githubusercontent.com/shichenxiao/spa/master/06-check/04-h5check/error.png">');
+    $('#imgone').html('<img src="https://raw.githubusercontent.com/guwenjia/spa/master/03-test4/error.png">');
     }else{
-    $('#imgone').html('<img src="https://raw.githubusercontent.com/shichenxiao/spa/master/06-check/04-h5check/yes.png">');
+    $('#imgone').html('<img src="https://raw.githubusercontent.com/guwenjia/spa/master/03-test4/1.png">');
     }
     
 });
   $('#height').blur(function(){
     var reg = /^\d+(\.{0,1}\d+){0,1}$/;
   if(!reg.test($('#height').val())){
-    $('#imgtwo').html('<img src="https://raw.githubusercontent.com/shichenxiao/spa/master/06-check/04-h5check/error.png">');
-    $('#imgtwo').html('<img src="https://raw.githubusercontent.com/shichenxiao/spa/master/06-check/04-h5check/error.png">');
+    $('#imgtwo').html('<img src="https://raw.githubusercontent.com/guwenjia/spa/master/03-test4/error.png">');
+    $('#imgtwo').html('<img src="https://raw.githubusercontent.com/guwenjia/spa/master/03-test4/error.png">');
     }else{
-    $('#imgtwo').html('<img src="https://raw.githubusercontent.com/shichenxiao/spa/master/06-check/04-h5check/yes.png">');
+    $('#imgtwo').html('<img src="https://raw.githubusercontent.com/guwenjia/spa/master/03-test4/1.png">');
     }
   });
   $("#add").attr("disabled","false").css("background","#E0E0E0");
