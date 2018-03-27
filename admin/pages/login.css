@@ -1,0 +1,15 @@
+*{
+  margin:0 auto;
+}
+body{
+  background-color:#e2e2e2;
+
+}
+
+.login{
+  width:320px;
+  height:200px;
+  background-color:white;
+  margin-top:200px;
+  
+}
