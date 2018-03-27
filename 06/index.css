@@ -1,0 +1,11 @@
+summary{
+	background-color:darkgrey;
+	font-size:20px;
+}
+li{
+	list-style: none;
+}
+.menu{
+	height:400px;
+	background-color:gainsboro;
+}
